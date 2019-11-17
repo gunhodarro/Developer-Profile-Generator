@@ -1,32 +1,4 @@
-const colors = {
-  green: {
-    wrapperBackground: "#E6E1C3",
-    headerBackground: "#C1C72C",
-    headerColor: "black",
-    photoBorderColor: "#black"
-  },
-  blue: {
-    wrapperBackground: "#5F64D3",
-    headerBackground: "#26175A",
-    headerColor: "white",
-    photoBorderColor: "#73448C"
-  },
-  pink: {
-    wrapperBackground: "#879CDF",
-    headerBackground: "#FF8374",
-    headerColor: "white",
-    photoBorderColor: "#FEE24C"
-  },
-  red: {
-    wrapperBackground: "#DE9967",
-    headerBackground: "#870603",
-    headerColor: "white",
-    photoBorderColor: "white"
-  }
-};
 
-function generateHTML(data, userColor) {
-  return `<!DOCTYPE html>
   <html lang="en">
      <head>
         <meta charset="UTF-8" />
@@ -34,7 +6,7 @@ function generateHTML(data, userColor) {
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
         <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
-        <title>Document</title>
+        <title>Dotitle>
 
         <style>
             @page {
@@ -101,8 +73,8 @@ function generateHTML(data, userColor) {
            display: flex;
            justify-content: center;
            flex-wrap: wrap;
-           background-color: ${colors[userColor].headerBackground};
-           color: ${colors[userColor].headerColor};
+           background-color: #870603;
+           color: white;
            padding: 10px;
            width: 95%;
            border-radius: 6px;
@@ -113,7 +85,7 @@ function generateHTML(data, userColor) {
            border-radius: 50%;
            object-fit: cover;
            margin-top: -75px;
-           border: 6px solid ${colors[userColor].photoBorderColor};
+           border: 6px solid white;
            box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
            }
            .photo-header h1, .photo-header h2 {
@@ -156,8 +128,8 @@ function generateHTML(data, userColor) {
            .card {
              padding: 20px;
              border-radius: 6px;
-             background-color: ${colors[userColor].headerBackground};
-             color: ${colors[userColor].headerColor};
+             background-color: #870603;
+             color: white;
              margin: 20px;
              text-align:center;
            }
@@ -195,43 +167,43 @@ function generateHTML(data, userColor) {
                 
                 <div class="photo-header card photo-header h1 phot-header h2">
 
-                    <img class="photo-header img" src="${data.data.avatar_url}" alt="">
+                    <img class="photo-header img" src="https://avatars1.githubusercontent.com/u/54383358?v=4" alt="">
                     <div style="display: inline-block;">
                             <h3>Hi!</h3><br> 
-                            <h4>My name is ${data.data.name}</h4>
+                            <h4>My name is Matt Juretic</h4>
                             <br>
                             <div class="links-nav nav-link">
-                                <a href="https://www.google.com/maps/search/?api=1&query=${data.data.location}">${data.data.location}</a>
-                                <a href="${data.data.html_url}">GitHub</a>
-                                <a href="${data.data.blog}">Blog</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Lakewood, Colorado">Lakewood, Colorado</a>
+                                <a href="https://github.com/gunhodarro">GitHub</a>
+                                <a href="">Blog</a>
                                 
                             </div>
                         </div>
                 </div>
 
-                <h4>Bio: ${data.data.bio}</h4>
+                <h4>Bio: Hello there my name is Matt Juretic, i am currently enrolled at University of Denver Coding Boot Camp. I am currently a Mercedes Benz Sprinter Technician.</h4>
         
 
                     <div class="card box" >
                         <h5>Public Repositories:</h5>
-                        <br><h6>${data.data.public_repos}</h6>
+                        <br><h6>20</h6>
                     </div>
                     
                     <div class="card box">
                     <h5>Followers:</h5>
-                    <br><h6>${data.data.followers}</h6>
+                    <br><h6>9</h6>
                 </div>
                 <br>
                
 
                     <div class="card box">
                         <h5>GitHub Stars:</h5>
-                        <br><h6>${data.data.followers}</h6>
+                        <br><h6>9</h6>
                     </div>
                     
                     <div class="card box">
                         <h5>Following:</h5>
-                        <br><h6>${data.data.following}</h6>
+                        <br><h6>14</h6>
                     </div>
                     
                 
@@ -243,6 +215,4 @@ function generateHTML(data, userColor) {
 
     </div>
 
-</body>`}
-
-module.exports = generateHTML;
+</body>
