@@ -26,7 +26,8 @@ function promptUser(){
         const queryUrl = `https://api.github.com/users/${username}`;
 
         axios.get(queryUrl).then(function(res) {
-           
+   
+
             const gitUserName = res.data.login;
             const gitProfileImg = res.data.avatar_url;
             const userLoca = res.data.location;
@@ -49,7 +50,7 @@ function promptUser(){
             console.log(starsNum);
             console.log(followingNum);
 
-           
+   
      console.log(brColor);
             fs.writeFile("portfolio.html", htmlgen(res, brColor), function(err) {
             
@@ -72,3 +73,4 @@ function promptUser(){
 }
 
 promptUser();
+

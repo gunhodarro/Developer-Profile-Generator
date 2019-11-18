@@ -203,7 +203,7 @@ function generateHTML(data, userColor) {
                             <div class="links-nav nav-link">
                                 <a href="https://www.google.com/maps/search/?api=1&query=${data.data.location}">${data.data.location}</a>
                                 <a href="${data.data.html_url}">GitHub</a>
-                                <a href="${data.data.blog}">Blog</a>
+                                <a href="${data.data.blog}"Blog</a>
                                 
                             </div>
                         </div>
